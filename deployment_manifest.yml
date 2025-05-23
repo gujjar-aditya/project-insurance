@@ -1,0 +1,26 @@
+---
+- name: Deploy on Docker server
+  hosts: docker_server
+  become: true
+  tasks:
+    - name: Stop and remove existing container
+      docker_container:
+        name: project-insurance
+        state: absent
+        force_kill: true
+      ignore_errors: yes
+   
+    - name: Remove existing image
+      docker_image:
+        name: adityagujjar/project-insurance:V1.0
+        state: absent
+        force: true
+      ignore_errors: yes
+
+    - name: Create new container
+      docker_container:
+        name: project-finance
+        image: adityagujjar/project-insurance:V1.0
+        state: started
+        ports:
+          - "8086:8081"
