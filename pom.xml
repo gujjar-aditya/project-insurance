@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.project.staragile</groupId>
 	<artifactId>insure-me</artifactId>
-	<version>1.0-SNAPSHOT</version> 
+	<version>0.0.1-SNAPSHOT</version> 
 	<name>Insure-me</name>
 	<description>Industry ready project on based on Insurance Domain</description>
 	<properties>
