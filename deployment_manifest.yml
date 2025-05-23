@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: insurance-cont
-          image: adityagujjar/project-insurance:V1.0
+          image: adityagujjar/project-insurance:V1.1
           imagePullPolicy: Always
           ports:
             - containerPort: 8081  
